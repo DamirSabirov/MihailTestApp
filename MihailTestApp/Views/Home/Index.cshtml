@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MihailTestApp.Models.VRGame>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p><h3>Тестовое задание</h3></p>
+    <p><h3>Список лучших VR-игр</h3></p>
+    </div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table table-striped table-condensed table-bordered">
+            <tr>
+                <th class="text-center">Название</th>
+                <th class="text-center">Разработчик</th>
+                <th class="text-center">Год</th>
+            </tr>
+            @foreach (var vrgame in Model)
+            {
+                <tr>
+                    <td class="text-center">@vrgame.Name</td>
+                    <td class="text-center">@vrgame.Developer</td>
+                    <td class="text-center">@vrgame.Year</td>       
+                </tr>
+            }
+        </table>
+    </div>
+</div>
